@@ -1,369 +1,395 @@
-<html>
-  <head>
-  <title>CV</title>
- 
-</head>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
-   *{
-   margin: 0;
-   padding: 0;
-}
-            
-  body {
-    background: black;
-    font-family: 'Share Tech Mono',monospace;
-   }
+        <title>ALJUN OBLEADA</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e345eb7187.js"></script>
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+<script src="https://kit.fontawesome.com/e345eb7187.js"></script>
+        <!-- Styles -->
+       <style type="text/css">
+           @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,900&display=swap');
 
 
-.navbar {
-background-color: #232;
-font-size:20px;
-
-color: white;  
-position: fixed; 
-overflow: hidden;
-top: 10;  
-width: 84.5%;   
-z-index:+5;  
+*{margin:0;padding:0; color:#d2dae0; font-font-family: 'Montserrat', sans-serif;letter-spacing:2px;}
+body{
+  background:#0a3353;
+max-width: 100%;
+    overflow-x: hidden;overflow-y:hidden;
 }
 
 
-.jumbo-background{
-  background-color: #232;
-  color:#fff;
-   margin-top: 80px; 
-  padding: 16px;
-  
-  
-}
-.profile-img{
-  margin-top: 120px;
-
-}
-
-.btn-git{
-  background-color:#797D7F;  
+.side1{
   color:white;
+  position:fixed;
+  top:0;left:0;
+  background-color:#0d4068;
+  width:40px;height:100vh;
+  float:left;
+  box-shadow: 0px 10px 5px 5px rgba(0,0,0,0.50);
+  z-index:5;
+}
+.clearfix {
+  overflow: auto;
+}
+.side1 h4{
+  position:fixed;
+  transform:rotate(270deg);
+  display:block;
+  left:-105px;bottom:130px;
+  margin:10px;
+  letter-spacing:2px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:600;
 }
 
-.btn-freeCodeCamp{
-  background-color:#58D68D;
-  color:white;
+.site{
+  height:100vh;
+  margin:0 25px 0 70px;
+  display:grid;
+  grid-template-columns:250px 1fr;
+  grid-template-rows:80vh;
+  grid-gap:25px;
+  z-index:2;
 }
-
-#workTitle{
-  color:grey;
-}
-
-li {
-font-size: 20px;
+.side-section{
+  background-color:#0d4068;
+  margin-top:25px;
+  box-shadow: 0px 0px 11px 5px rgba(0,0,0,0.50);
+  height:89%;
   
 }
-
-#projectlink {
+.profile{
+  display:grid;
+  grid-template-rows:193px; 25px;  
+}
+.pic{
+  width:150px; height:150px; 
+  margin:auto;
+  border:10px solid #224764;
+}
+.pic>img{
+  max-width:130px; height:130px;
+  border:10px solid #0a3353;
+}
+.name{
+  font-family: 'Montserrat', sans-serif;
+  text-align:center;
+  vertical-align:middle;
   font-size:20px;
+  line-height:24px;
+  margin-bottom:50px;
+ }
+}
+.nav{
+  height:100%;
+  display:grid;
+  grid-template-rows:auto auto auto auto auto;
+  grid-autoflow:row;
+}
+.nav .nav-list{
+ 
+  list-style:none;
+}
+.nav .nav-list .nav-link{
+  color:#a4a7aa;
+  font-family: 'Montserrat', sans-serif;
+  font-size:90%;
+  font-weight:600;
+  text-decoration:none;
+  display:block;
+  padding:7px;
+  border-top:2px inset #3c6699;
+}
+.nav-link i{
+  display:inline-block;
+  width:20px; height:16px; inline-height:25px;
+  margin-right: 12px;
+  padding:8px;
+  border-radius:50%;
+  color:inherit;
+  border:1px inset #3c6699;
+  text-align:center;
+  vertical-align:middle;
+}
+.nav-link:hover > i{
+  color:#eee;
+}
+
+.nav .nav-list .nav-link:hover{
+color:#ecedee;  
+}
+
+.main-section{
+  background:linear-gradient(0deg,rgba(10,54,86,0.8),rgba(63,81,181,0.5));
+  margin-top:25px;
+  height:92vh;
+  border:5px solid #0d4068;
+  box-shadow: 0px 0px 11px 5px rgba(0,0,0,0.50);
+  overflow-x:hidden;
+  overflow-y:scroll;
+  scroll-behavior:smooth;
+  scroll-snap-type:y mandatory;
+}
+
+.landing{
+  height:95vh;width:100%;
+    background:linear-gradient(0deg,rgba(10,54,86,0.8),rgba(63,81,181,0.5)),url(https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80);
+  background-attachment:fixed;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  self-align:left;
+}
+.landing p{
+  font-size:30px;
+  font-family: 'Montserrat', sans-serif;
+  position:relative;
+  top:50%;
+  transform:translateY(-60%);
+  margin:0 20px;
+}
+.big{
+  font-size:55px;
+  font-family:montserrat;
+  color:#eee !important;
+  font-weight:900;
+}
+.small{
+  font-size:19px;
+  letter-spacing:4px;
+  font-family: 'Montserrat', sans-serif;
+}
+.btn{
+  display:block;
+  font-family: 'Montserrat', sans-serif;
+  width:140px;
+  border-radius:30px;
+  float:left;
+  margin:0 10px 0 20px; padding:12px;
+  text-decoration:none;
+  text-align:center;
+  position:relative;
+  top:50%;
+  transform:translateY(-120%);
+}
+
+.btn1{
+  border:2px solid #eee;
+  color:#eee;
+  font-size:16px;
+}
+
+.btn2{
+  background-color:#eee;
+  border:2px solid #eee;;
+  color:#0a3353;
+  font-weight:600;
+  }
+.btn:hover{
+  background-color:#ff6738;
+  color:#0a3353;
+  border:2px solid #ff6738;
+  font-weight:600;
   
 }
-canvas {
-    position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-5;
+.about{
+  height:100vh; width:100%;
+  display:grid;
+  grid-template-rows:60vh 40vh;
+  
+}
+.about .about-header{
+  background:linear-gradient(0deg,rgba(18,24,54,0.8),rgba(20,30,67,0.7)),url(https://images.unsplash.com/photo-1535340582796-799448c62e08?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80);
+  background-position:center;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size:cover;
+  self-align:left;
+
+  
+}
+.about-header p{
+  position:relative;
+  display: block;
+  top:40%;text-align:center;
+}
+.about .about-header p i{
+  display:block;
+  font-size:100px;
+ padding:25px;
+  width:95px;
+  text-align:center;
+  color:#eee;
+  background-color:#000e;
+  border-radius:50%;margin-left:50%;
+  box-shadow:0 0 15px #00bcd4;
+  transform:translateX(-50%);
+}
+
+.about-discription{
+  display:grid;
+  grid-template-columns:255px auto;
+    margin:25px; border-gap:20px;
+  align-items:center;
+}
+.about-discription .imgbox{
+  width:250px; height:250px;
+}
+.about-discription .imgbox img{
+  display:inline-block;
+  width:250px; height:250px;
+  align-content:center; margin:auto;
+}
+
+.about-discription .discription-box{
+ height:250px; width:auto;
+  padding:20px;
+  
+}
+.about-discription .discription-box h1{
+  font-family:montserrat;
+  margin:21px 0 20px 0;
+  self-align:center;
+  align-content:middle;
+}
+.about-discription .discription-box p{
+  font-family:montserrat;
+  margin:0 0 15px 0;
+}
+
+
+
+
+
+
+
+
+
+/*-------------------------Small Screens--------------------------*/
+
+
+@media only screen and (max-width: 1000px) {
+  
+    .site{
+      display:grid;
+      grid-template-columns:1fr;
   }
+
+  .side-section{
+    display:none;
+  }
+
+}
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+}
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #0a3151;
+  border: 0px none #1cb1f5;
+  opacity:0.1;
+  border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff00ff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #ff0080;
+}
+::-webkit-scrollbar-track {
+  background: #666;
+  border: 0px none #000;
+  border-radius: 58px; opacity:0.3;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #063360;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
 </style>
-<body>
-
-<div class="container" >
-  <div id="topheader">
-  <nav class="navbar navbar-inverse" id="home">
-      <div class="navbar-header">
-        
- 
-        <ul class="nav navbar-nav">
-          <li ><a href="#profile">Profile</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skill">Skill</a></li>
-         
-          <li><a href="#project">Project</a></li>
-          
-        </ul>
-     </div> 
-  </nav>
-  </div>  
-   <div class="jumbotron jumbo-background" id="profile">
+    </head>
+    <body>
+      <div class="side1"> <h4>This is my<span style="color:#00bcd4;"> website CV.</span></h4></div>
+<div class="site">
+  <!---site starts--->
   
-     <div class="row">
-      <div class="col-sm-9">
-        <div class="intro-text">
-          <h1>Profile</h1>
-    <hr class="star-bright">
-          <h3>
-          Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : Aldo Prakoso <br>
-          Date of Birth&nbsp&nbsp: Jakarta,  June 2nd 1993  <br>
-          Sex	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	: Male<br>
-          Religion	&nbsp&nbsp&nbsp&nbsp&nbsp	: Catholic <br>
-          Nationality &nbsp&nbsp		: Indonesia<br>
-          Email	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	: aldoprakoso1@gmail.com<br>
-Phone &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp		: +628174950851</br>
-  
-  
-          </h3> 
-          <hr class="star-bright">
-          <span class="skill "><a href="https://github.com/aldoalprak" target="_blank"><button type="button" class="btn btn-git col-sm-4"><i class="fa fa-github" aria-hidden="true"></i> Github</button></a>
-            
-<a href="https://www.freecodecamp.org/aldoalprak" target="_blank"><button type="button" class="btn btn-freeCodeCamp col-sm-4" ><i class="fa fa-free-code-camp" aria-hidden="true"></i> FreeCodeCamp</button></a>
-  
-<a href="https://www.linkedin.com/in/aldo-prakoso-9a1941101" target="_blank"><button type="button" class="btn btn-linkedin col-sm-4"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</button></a>            
-            
-</span>
-        </div>  
+  <div class="side-section">
+    <!---side section starts----->
+    <div class="profile">
+      <div class="pic">
+        <img src="https://cdn.pixabay.com/photo/2017/12/25/22/52/tiger-3039280_960_720.jpg" alt="tiger-pic">
       </div>
-      <div class="col-sm-3">
-        <img src="https://www.dropbox.com/s/kjb1bd48ul4wp2a/AldoPrakoso.JPG?raw=1" class="img-responsive img-rectangle profile-img" alt="Profile">  
-      </div>
+      <div class="name"><b>Prakash</b> Kumar</div>
+     
+      <ul class="nav">
+        <li class="nav-list">
+          <a href="#home" class="nav-link"><i class="fas fa-home"></i>HOME</a>
+        </li>
+        <li class="nav-list">
+          <a href="#about" class="nav-link"><i class="fas fa-user"></i>ABOUT</a>
+        </li>
+        <li class="nav-list">
+          <a href="#resume" class="nav-link"><i class="fas fa-fire"></i>RESUME</a>
+        </li>
+        <li class="nav-list">
+          <a href="PROJECTS" class="nav-link"><i class="fas fa-laptop-code"></i>PROJECTS</a>
+        </li>
+        <li class="nav-list">
+          <a href="CONTACT" class="nav-link"><i class="fas fa-headphones"></i>CONTACT</a>
+        </li>
+      </ul>
     </div>
+
+  <!--side section ends--->
   </div>
   
-  <div class="jumbotron jumbo-background" id="about">
-    <h1>About</h1>
-    <hr class='star-bright'>
-    <p>I'm a person who loves challenge and always interested to learn new things. I see a problem as a challenge to make
-me me grow as a person. I always try to break my limit and eliminate the mental wall. Stay hungry and Stay Foolish is my motto.    </p>
-  </div>
-  
-  
- <div class="jumbotron jumbo-background" id="experience">
-    <h1>Experience</h1>
-    <hr clas="star-bright">
-   
-   <h3 id="workTitle"><Strong>Estimator and Web Developer</strong></h3>
-   <h4 id="workTitle">PT. Saranacitra Dutajaya <br>Jun 2016-Present</h4>      
-    <p>
-    PT. Saranacitra Dutajaya is a mechanical and electrical contractor company based in Jakarta.The company has collaborate with many big developer, industries and main contractor such as PT. Agung Podomoro Land, PT. Jaya Konstruksi, PT. Indofood CBP Sukses Makmur, PT. Total Bangun Persada, PT. Tata Mulia Nusantara, and many more
-<br><br>
-There are 2 roles that I'm doing here in this company.
-<br><br>      
-1. Estimator
-As an estimator my main duty is Project Budgeting<br>
-In tender/bidding process we need to propose our price quotation to execute a project, so my duty here is to make a price quotation that should coverage all the cost in optimum way so we can win the bidding and also get a nice profit.
-This work needs a knowledge of both technical understanding and material budgeting. There are 4 main technical understanding should be understood : Plumbing System, Electrical System. Electronic System, and HVAC System.
-<br><br>
-2. Web and Apps Developer <br>
-Develop the website for this company so it can be known in the digital world. I'm using wordpress as CMS and iPage as the host to develop this website.
-For the web based application, I've made an apps to make a progress process easier. FYI, a progress process is a process to collect a fee, based on what we have installed in a project.  
-   </p>
- <br>
- <br>  
- <h3 id="workTitle"><Strong>Digital Marketing</strong></h3>
-   <h4 id="workTitle">DocDoc Pte. Ltd. <br>Sept 2015-May 2016</h4>      
-    <p>
-   DocDoc is a portal to help you find great doctors, dentists, and other healthcare providers, read verified patient reviews (where available), and instantly book appointments– no phone calls needed! The service is absolutely free for patients. 
-<br><br>
-As Digital Marketing, my main duties are to maintain and optimize online campaign (using Google Adwords) to increase leads and analyze when there's an issue. Also, I help another team to monitor theirs project traffic and find out the issue with Google Analytics.
-  <br>
- <br>  
- <h3 id="workTitle"><Strong>Automation Laboratory Assistant</strong></h3>
-   <h4 id="workTitle">Universitas Katolik Parahyangan <br>Jan 2015-Jun 2015</h4>      
-    <p>
-   Main duty: teaching undergraduate students about automation lessons such as Programable Logic Controller (Siemens) and Lego Mindstorms.
-  
-  </div>
-  <div class="jumbotron jumbo-background" id="education">
-  <h1>Education</h1>
-    <hr class="star-bright">
-    <h3 id="workTitle"><Strong>freeCodeCamp</strong></h3>
-   <h4 id="workTitle">2017-present</h4>      
-    <p>Front End Development Course</p>
-  <br><br>
-    <h3 id="workTitle"><Strong>Codecademy</strong></h3>
-   <h4 id="workTitle">2016-2017</h4>      
-    <p>Javascript Course</p>
-    <br><br>
-    <h3 id="workTitle"><Strong>Universitas Katolik Parahyangan</strong></h3>
-   <h4 id="workTitle">2011-2015</h4>      
-    <p>Bachelor's Degree in Industrial Engineering</p> 
-  </div>
-  
-   
-  <div class="jumbotron jumbo-background" id="skill">
-    <h1>Skill</h1>
-    <hr class="star-bright">
-    <h3>Hard Skill</h3>
+  <div class="main-section">
+    <!----main section starts------>
     
-    <ol >
-      <li>Basic HTML,CSS,Javascript, and Nodejs</li>
-        <li>Basic Selenium Web Driver</li>
-      <li>Basic Phantomjs</li>
-      <li>Google Spreadsheet</li>
-      <li>Basic Google Script</li>
-      <li>Microsoft Word,Excel,PowerPoint</li>
-      <li>Material Budgetng</li>
-      <li>Plumbing System</li>
-      <li>Electrical System</li>
-      <li>Electronic System</li>
-      <li>HVAC System</li>
-      <li>Google Adwords</li>
-      <li>Google Analytics</li>
-    </ol>
-    <h3>Soft Skill</h3>
-    <ol  id="list">
-      <li>Accustomed to work in team and individually</li>
-      <li>Accustomed to work under pressure</li>
-      <li>Interpersonal skill</li>
-      <li>Presentation skill</li>
-    </ol>
+    <div class="landing" id="home"> <!--Home starts---->
+      <p>HI, I'M <br><span class="big">Prakash Kumar</span><br><span class="small">I try to make web look better.</span></p>
+      <a href="#" class="btn btn1">Download CV</a>
+      <a href="#contact" class="btn btn2">Hire Me</a>
+      
+</div><!--home ends---->
     
+    <div class="about" id="about">
+      <div class="about-header">
+        <p class="big"><i class="fas fa-user-tie"></i>ABOUT ME</p>
+      </div>
+      <div class="about-discription">
+        <div class="imgbox">
+          <img src="https://cdn.pixabay.com/photo/2017/12/25/22/52/tiger-3039280_960_720.jpg" alt="tiger-pic"></div>
+      <div class="discription-box">
+        <H1>HELLO</H1>
+        <p>I’m Prakash Kumar. I designed this site so you can get to know me on a personal level. My career as a Web Designer, my portfolio, my personal photography, my favorite quotes, and so much more. So please sit back and enjoy!</p>
+        </div>
+      
+    </div>
+    
+		
+    <!----main section ends---->
   </div>
   
   
-  <div class="jumbotron jumbo-background" id="project">
-      <h1>Project</h1>
-      <hr class="star-bright">
-    
-      <h3 id="workTitle"><strong>Auto Promote Tokopedia Tool</strong></h3>
-   <h4 id="workTitle">Feb 2017-Present</h4>      
-    <p>
-   This is the tool to auto promote a product in Tokopedia.<br>
-      I'm using selenium web driver and node.js to make this tool.</p>
-      <a id ="projectlink" href=https://github.com/aldoalprak/Tokped-Auto-Promote> See Project Here </a>
-      
-     <br><br>
-   <h3 id="workTitle"><Strong>Auto Generating Tool for Making  Minute Of Installation</strong></h3>
-   <h4 id="workTitle">Oct 2017-Mar 2018</h4>      
-    <p>
-   The purpose of this app is to make a progress process more efficient. FYI, a progress process is a process to collect a fee, based on what we material that has been installed in a project. This process needs many requirements, one of them is minutes of installation (Berita Acara Pemasangan) . So, in conventional way, the process is like this:
-<br>      
-1.Supervisor should take a picture for the material that has been installed ,<br>
-2.Supervisor give the picture to a project admin,<br>
-3.Project Admin should type all the information to  the template such as time when the picture was taken, floor level,etc and choose the picture to insert in minutes of installation.
-<br><br>
-With this apps, a supervisor directly just input all the information needed and take the picture via Appsheet that connect to Google Spreadsheet in his smartphone then with the help of Google Script, spreadsheet will automatically generate all the information and picture to become a ready to print minutes of installation. </p>
-    <br><br>
-    <h3 id="workTitle"><Strong>Evaluating and Redesign Lazada Website Using Eyetracking Analysis and Usability Concept</strong></h3>
-   <h4 id="workTitle">Jan 2015-Jun 2015</h4>      
-    <p>
-   Evaluating Lazada website using Tobii Eyetracker and Usability concept (Effectiveness, Efficiency, Learnability, and Satisfaction) to make a great user experience when doing online shopping. After evaluating the website and find the usability problems, I made the new design using invisionapp and test it again to the users.</p>
-    <br><br>
-    <h3 id="workTitle"><Strong>Darth Vader Sound Board Android App</strong></h3>
-   <h4 id="workTitle">Dec 2014-Dec 2014</h4>      
-    <p>I made this application is just for fun and to learn a little bit about Android Application. This application was made by MIT App Inventor 2, this software allows you to make app without coding. For further information, you can check this link:<a href= "ai2.appinventor.mit.edu/">here</a> <br>
-
-To try my app :<br>
-1. Download it via dropbox<br>
-2. In you phone go to "Settings > Security" or "Settings > Security & Screen Lock" and then check the box next to "Unknown Sources" 
-<br><br>
-NOTE : This App only tested on Moto G (XT1032) and haven't tested in any platforms, so it's possible there's a mess layout appear in your phone.<br>
-<a href=https://www.dropbox.com/s/vxbxw5s34hnuv8c/DarthVader.apk?dl=0> Download Project Here </a>      
-   </p>
-      
-   </div>
   
-         
-  <footer class="container-fluid text-center">
-    <a href="#topheader" title="To Top">
-      <i class="fa fa-arrow-circle-up   fa-5x" aria-hidden="true"></i>
-    </a><br />
-    <p >Made By Aldo</p>
- 
-  </footer>
-  
- </div> 
-  <script>
-     // geting canvas by id c
-        var c = document.getElementById("c");
-        var ctx = c.getContext("2d");
-
-        //making the canvas full screen
-        c.height = window.outerHeight;
-        c.width = window.outerWidth;
-
-        //chinese characters - taken from the unicode charset
-        var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
-        //converting the string into an array of single characters
-        matrix = matrix.split("");
-
-        var font_size = 10;
-        var columns = c.width/font_size; //number of columns for the rain
-        //an array of drops - one per column
-        var drops = [];
-        //x below is the x coordinate
-        //1 = y co-ordinate of the drop(same for every drop initially)
-        for(var x = 0; x < columns; x++) 
-            drops[x] = 1 
-
-        //drawing the characters
-        function draw()
-        {
-            //Black BG for the canvas
-            //translucent BG to show trail
-            ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
-            ctx.fillRect(0, 0, c.width, c.height);
-
-            ctx.fillStyle = "#0F0"; //green text
-            ctx.font = font_size + "px arial";
-            //looping over drops
-            for(var i = 0; i < drops.length; i++)
-            {
-                //a random chinese character to print
-                var text = matrix[Math.floor(Math.random()*matrix.length)];
-                //x = i*font_size, y = value of drops[i]*font_size
-                ctx.fillText(text, i*font_size, drops[i]*font_size);
-
-                //sending the drop back to the top randomly after it has crossed the screen
-                //adding a randomness to the reset to make the drops scattered on the Y axis
-                if(drops[i]*font_size > c.height && Math.random() > 0.975)
-                    drops[i] = 0;
-
-                //incrementing Y coordinate
-                drops[i]++;
-            }
-        }
-        setInterval(draw, 20);
-
-
-
-//smooth scrolling
-$("document").ready(function(){
-  
- // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#topheader']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-      
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (1000) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 1000, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-});
-
-$(".navbar-link [href]").each(function() {
-    if (this.href == window.location.href) {
-        $(this).addClass("active");
-        }
-    });
-  </script>
-</body>  
- <canvas id="c"></canvas>
+  <!---site ends---->
+</div>
+    </body>
 </html>
